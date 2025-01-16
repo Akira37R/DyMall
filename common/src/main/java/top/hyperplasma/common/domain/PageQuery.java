@@ -28,7 +28,7 @@ public class PageQuery {
     @ApiModelProperty("排序方式")
     private String sortBy;
 
-    public int from(){
+    public int from() {
         return (pageNo - 1) * pageSize;
     }
 
@@ -42,7 +42,7 @@ public class PageQuery {
             return page;
         }
         // 前端是否有排序字段
-        if (StrUtil.isNotEmpty(sortBy)){
+        if (StrUtil.isNotEmpty(sortBy)) {
             OrderItem orderItem = new OrderItem();
             orderItem.setAsc(isAsc);
             orderItem.setColumn(sortBy);
@@ -52,7 +52,7 @@ public class PageQuery {
     }
 
     public <T> Page<T> toMpPage(String defaultSortBy, boolean isAsc) {
-        if (StringUtils.isBlank(sortBy)){
+        if (StringUtils.isBlank(sortBy)) {
             sortBy = defaultSortBy;
             this.isAsc = isAsc;
         }
@@ -63,6 +63,7 @@ public class PageQuery {
         page.addOrder(orderItem);
         return page;
     }
+
     public <T> Page<T> toMpPageDefaultSortByCreateTimeDesc() {
         return toMpPage("create_time", false);
     }
