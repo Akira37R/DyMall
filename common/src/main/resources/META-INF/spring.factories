@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  top.hyperplasma.common.config.MyBatisConfig,\
+  top.hyperplasma.common.config.MvcConfig,\
+  top.hyperplasma.common.config.MqConfig,\
+  top.hyperplasma.common.config.JsonConfig
