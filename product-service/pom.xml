@@ -18,6 +18,19 @@
     </properties>
 
     <dependencies>
+        <!--common-->
+        <dependency>
+            <groupId>top.hyperplasma</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--api-->
+        <dependency>
+            <groupId>top.hyperplasma</groupId>
+            <artifactId>service-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
