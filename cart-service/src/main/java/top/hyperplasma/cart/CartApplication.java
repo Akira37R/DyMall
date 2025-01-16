@@ -1,4 +1,4 @@
-package top.hyperplasma.product;
+package top.hyperplasma.cart;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -7,10 +7,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import top.hyperplasma.api.config.DefaultFeignConfig;
 
 @EnableFeignClients(basePackages = "top.hyperplasma.api.client", defaultConfiguration = DefaultFeignConfig.class)
-@MapperScan("top.hyperplasma.product.mapper")
 @SpringBootApplication
-public class ProductApplication {
+@MapperScan("top.hyperplasma.order.mapper")
+public class CartApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ProductApplication.class, args);
+        SpringApplication.run(CartApplication.class, args);
     }
 }
