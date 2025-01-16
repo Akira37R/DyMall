@@ -8,7 +8,7 @@ import top.hyperplasma.api.config.DefaultFeignConfig;
 
 @EnableFeignClients(basePackages = "top.hyperplasma.api.client", defaultConfiguration = DefaultFeignConfig.class)
 @SpringBootApplication
-@MapperScan("top.hyperplasma.order.mapper")
+@MapperScan("top.hyperplasma.cart.mapper")
 public class CartApplication {
     public static void main(String[] args) {
         SpringApplication.run(CartApplication.class, args);
