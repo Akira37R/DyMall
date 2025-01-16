@@ -17,7 +17,6 @@
         <module>checkout-service</module>
         <module>payment-service</module>
         <module>common</module>
-        <module>api</module>
     </modules>
 
     <parent>
@@ -114,6 +113,18 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <configuration>
+                    <protocArtifact>com.google.protobuf:protoc:3.x.x</protocArtifact>
+                    <outputDirectory>src/main/java</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
