@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: product-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: ${dymall.nacos.host}:${dymall.nacos.port}
+      config:
+        file-extension: yaml
+        shared-configs:
+          - dataId: shared-jdbc.yaml
+          - dataId: shared-log.yaml
+          - dataId: shared-swagger.yaml

@@ -1,0 +1,11 @@
+server:
+  port: 8081
+feign:
+  okhttp:
+    enabled: true
+dymall:
+  swagger:
+    title: DyMall-商品服务
+    package: top.hyperplasma.product.controller
+  db:
+    database: dymall-product
