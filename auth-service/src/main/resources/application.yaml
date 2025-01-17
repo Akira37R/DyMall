@@ -1,0 +1,13 @@
+server:
+  port: 8080
+dymall:
+  jwt:
+    location: classpath:dymall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /products/**

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: auth-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: ${dymall.nacos.host}:${dymall.nacos.port}
+      config:
+        file-extension: yaml
+        shared-configs:
+          - dataId: shared-log.yaml
