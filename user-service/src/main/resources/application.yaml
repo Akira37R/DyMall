@@ -9,3 +9,8 @@ dymall:
     package: top.hyperplasma.user.controller
   db:
     database: dymall-user
+  jwt:
+    location: classpath:dymall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
