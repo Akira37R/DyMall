@@ -1,6 +1,7 @@
 package top.hyperplasma.product.domain.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -18,30 +19,86 @@ public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 商品id
+     */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    /**
+     * SKU名称
+     */
     private String name;
 
+    /**
+     * 价格（分）
+     */
     private Integer price;
 
+    /**
+     * 库存数量
+     */
     private Integer stock;
 
-    private String picture;
+    /**
+     * 商品图片
+     */
+    private String image;
 
+    /**
+     * 类目名称
+     */
     private String category;
 
-    private String description;
+    /**
+     * 品牌名称
+     */
+    private String brand;
 
-    private Integer sales;
+    /**
+     * 规格
+     */
+    private String spec;
 
-    private Integer status; // 1-正常 2-下架 3-删除
+    /**
+     * 销量
+     */
+    private Integer sold;
 
+    /**
+     * 评论数
+     */
+    private Integer commentCount;
+
+    /**
+     * 是否是推广广告，true/false
+     */
+    @TableField("isAD")
+    private Boolean isAD;
+
+    /**
+     * 商品状态 1-正常，2-下架，3-删除
+     */
+    private Integer status;
+
+    /**
+     * 创建时间
+     */
     private LocalDateTime createTime;
 
+    /**
+     * 更新时间
+     */
     private LocalDateTime updateTime;
 
+    /**
+     * 创建人
+     */
     private Long creator;
 
+    /**
+     * 修改人
+     */
     private Long updater;
+
 }
