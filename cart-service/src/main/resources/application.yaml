@@ -1,0 +1,24 @@
+server:
+  port: 8082
+  tomcat:
+    threads:
+      max: 25
+    accept-count: 25
+    max-connections: 100
+feign:
+  okhttp:
+    enabled: true
+#  sentinel:
+#    enabled: true
+dymall:
+  swagger:
+    title: DyMall-购物车服务
+    package: top.hyperplasma.cart.controller
+  db:
+    database: dymall-cart
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090 # sentinel控制台
+      http-method-specify: true # 是否设置请求方式作为资源名称
