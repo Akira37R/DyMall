@@ -1,0 +1,7 @@
+dymall:
+  nacos:
+    host: unknown
+    port: 8848
+  rabbitmq:
+    host: unknown
+    port: 5672

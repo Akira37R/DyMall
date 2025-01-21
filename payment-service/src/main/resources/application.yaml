@@ -1,0 +1,18 @@
+server:
+  port: 8086
+feign:
+  okhttp:
+    enabled: true
+dymall:
+  swagger:
+    title: DyMall-支付服务
+    package: top.hyperplasma.payment.controller
+  db:
+    database: dymall-payment
+spring:
+  rabbitmq:
+    host: ${dymall.rabbitmq.host}
+    port: ${dymall.rabbitmq.port}
+    virtual-host: /dymall
+    username: dymall
+    password: 123
