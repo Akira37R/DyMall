@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: order-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: ${dymall.nacos.host}:${dymall.nacos.port}
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-jdbc.yaml
+          - data-id: shared-log.yaml
+          - data-id: shared-swagger.yaml
+          - data-id: shared-seata.yaml

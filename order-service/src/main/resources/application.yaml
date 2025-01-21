@@ -1,0 +1,18 @@
+server:
+  port: 8085
+feign:
+  okhttp:
+    enabled: true
+dymall:
+  swagger:
+    title: DyMall-交易服务
+    package: top.hyperplasma.order.controller
+  db:
+    database: dymall-order
+spring:
+  rabbitmq:
+    host: ${dymall.rabbitmq.host}
+    port: ${dymall.rabbitmq.port}
+    virtual-host: /dymall
+    username: dymall
+    password: 123
